@@ -1,0 +1,150 @@
+.contact-form {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.social-links{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    display: inline-block;
+    li{
+        float: left;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        line-height: 60px;
+        text-align: center;
+        background: $o-color-white;
+        border:2px solid;
+        margin-right: 10px;
+        font-size: 20px;
+        @extend .text-primary;
+        i{
+            @extend .text-primary;
+        }
+    }
+    li:last-child{
+        margin-right: 0px;
+    }
+}
+.contact-details{
+    display: flex;
+}
+.location-icon{
+    border:2px solid;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 60px;
+    float: left;
+    margin-right: 10px;
+    font-size: 16px;
+    @extend .text-primary;
+}
+.contact-info{
+    line-height: 20px;
+    font-size: 13px;
+}
+
+.o_footer {
+	background-color: $o-bg-footer;
+	color: $o-color-white;
+	.svg-inline--fa {
+		width: 14px;
+    }
+    a{
+        @extend .text-primary;
+    }
+    a.top-btn{
+        @extend .text-white;
+    }
+	h1 {
+		color: $o-color-white !important;
+	}
+	h2 {
+		color: $o-color-white !important;
+	}
+	h3 {
+		color: $o-color-white !important;
+	}
+	h4 {
+		color: $o-color-white !important;
+	}
+	h5 {
+		color: $o-color-white !important;
+	}
+	h6 {
+		color: $o-color-white !important;
+	}
+}
+.bottom-logo {
+	margin-top: 30px;
+}
+hr.contact-saperator {
+	border-top: 1px solid rgba(255,255,255,0.1);
+	margin-top: 50px;
+}
+
+@media only screen and (max-width: 1200px){
+    .contact-details{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .contact-form {
+        position: relative;
+    }
+    .contact-details{
+        display: block;
+    }
+}
+@media only screen and (max-width: 767px) {
+	hr.contact-saperator {
+		margin-top: 0px;
+	}
+	.bottom-logo {
+		.col {
+			margin: 10px 0;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 560px){
+    .social-links{
+        li{
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            line-height: 30px;
+            font-size: 14px;
+        }
+    }
+    .location-icon{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 30px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .bottom-logo{
+        .col{
+            flex: 0 100%!important;
+        }
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .location-icon{
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        border-radius: 25px;
+    }
+}

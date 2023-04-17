@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<template id="s_partner_slider" name="Images Block">
+<section class="snippet_partner_logo">
+<div class="container">
+  <div class="row text-center">
+     <div class="col"><img src="/theme_aspire/static/src/img/logo1.png"/></div>
+     <div class="col"><img src="/theme_aspire/static/src/img/logo2.png"/></div>
+     <div class="col"><img src="/theme_aspire/static/src/img/logo3.png"/></div>
+     <div class="col"><img src="/theme_aspire/static/src/img/logo4.png"/></div>
+     <div class="col"><img src="/theme_aspire/static/src/img/logo5.png"/></div>
+     <div class="col"><img src="/theme_aspire/static/src/img/logo6.png"/></div>
+ </div>
+ </div>  
+</section>
+</template>
+ <template id="place_partner_into_bar" inherit_id="website.snippets" name="Place Partner into bar">
+    <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+        <t t-snippet="theme_aspire.s_partner_slider"
+        t-thumbnail="/theme_aspire/static/src/img/snippets_thumbs/s_partner.jpg"/>
+    </xpath>
+</template>
+
+</odoo>

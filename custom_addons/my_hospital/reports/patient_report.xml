@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <report
+            id="report_patient_card"
+            string="Patient Card"
+            model="hospital.patient"
+            report_type="qweb-pdf"
+            attachment_use="True"
+            name="my_hospital.report_patient"
+            file="my_hospital.report_patient"/>
+
+    <report
+            id="report_patient_card1"
+            string="Patient Card1"
+            model="hospital.patient"
+            report_type="qweb-pdf"
+            attachment_use="True"
+            name="my_hospital.report_patient1"
+            file="my_hospital.report_patient1"/>
+
+</odoo>

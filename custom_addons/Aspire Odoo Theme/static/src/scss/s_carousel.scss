@@ -1,0 +1,52 @@
+
+.carousel-caption {
+    position: absolute;
+    bottom: 21%;
+    left: 60px;
+    right:unset;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: $o-color-white;
+    text-align: center;
+    .slider-title{
+        font-size: 44px;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 60px;
+      
+    }
+    .slider-text{
+        font-size: 21px;
+    }
+  
+}
+.carousel-control-next-icon{
+    background-image: url("../img/arrow-right.png")!important;
+    width: 35px;
+    height: 35px;
+}
+.carousel-control-prev-icon{
+    background-image: url("../img/arrow-left.png")!important;
+    width: 35px;
+    height: 35px;
+}
+.carousel-item[style]{
+    min-height: auto!important;
+}
+.carousel-image{
+    min-height: 481px!important;
+}
+@media only screen and (max-width:1024px){
+    .carousel-caption {
+        bottom: 15%;
+    }
+    .carousel-image{
+        min-height: 410px!important;
+    }
+}
+@media only screen and (max-width:480px){
+    .carousel-image{
+        min-height: 280px!important;
+    }
+}

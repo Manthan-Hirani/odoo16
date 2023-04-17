@@ -1,0 +1,145 @@
+body {
+    font-size: $o-default-font-size;
+    // color: $o-color-gray;
+    line-height: 26px;
+}
+h1 {
+    font-weight: 500;
+    margin: 0;
+    font-size: $o-h1-font-size;
+}
+
+.h1 {
+    font-weight: 500;
+    margin: 0;
+    font-size: $o-h1-font-size;
+}
+
+h2 {
+    font-weight: 500;
+    margin: 0;
+    font-size: $o-h2-font-size;
+}
+
+.h2 {
+    font-weight: 500;
+    margin: 0;
+    font-size: $o-h2-font-size;
+}
+
+h3 {
+    font-weight: 500;
+    margin: 0;
+    font-size: $o-h3-font-size;
+}
+
+.h3 {
+    font-weight: 500;
+    margin: 0;
+    font-size: $o-h3-font-size;
+}
+
+h4 {
+    font-weight: 500;
+    margin: 0;
+    font-size: $o-h4-font-size;
+}
+
+.h4 {
+    font-weight: 500;
+    margin: 0;
+    font-size: $o-h4-font-size;
+}
+
+h5 {
+    font-weight: 500;
+    margin: 0;
+    font-size: $o-h5-font-size;
+}
+
+.h5 {
+    font-weight: 500;
+    margin: 0;
+    font-size: $o-h5-font-size;
+}
+
+h6 {
+    font-weight: 500;
+    margin: 0;
+    font-size: $o-h6-font-size;
+}
+
+.h6 {
+    font-weight: 500;
+    margin: 0;
+    font-size: $o-h6-font-size;
+}
+[aria-hidden="true"], [aria-hidden="1"] {
+    display: inline-block !important; 
+}
+a{
+    color: $o-color-gray;
+}
+.bg-white{
+    background-color:$o-bg-white;
+}
+.bg-offwhite{
+    background-color:$o-bg-off-white;
+}
+.bg-primary{
+  background-color: $o-color-primary;
+}
+.text-primary{
+  color:$o-color-primary;
+}
+.border-color-primary{
+    border-color:$o-color-primary;
+  }
+.bg-secondary{
+  background-color: $o-color-secondary; 
+}
+.text-secondary{
+  color:$o-color-secondary;
+}
+.border-color-secondary{
+    border-color:$o-color-secondary;
+  }
+.color-white{
+    color: $o-color-white !important;
+}
+.section-padding{
+    padding:40px 0;
+}
+.section-title{
+    margin-bottom:30px;
+    font-weight: 600;
+}
+.section-subtitle{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.btn-rounded{
+    border-radius:50px;
+}
+.top-btn{
+    border-radius: 100%;
+    color: $o-color-white!important;
+}
+@media only screen and (max-width: 991px){
+    .tab-view-margin{
+        margin-bottom: 30px;
+    }
+    .section-subtitle{
+        width: 80%;
+    }
+}
+  @media only screen and (max-width: 767px){
+        .mobile-view-margin{
+            margin-bottom: 30px;
+        }
+        .section-subtitle{
+            width: 100%;
+        }
+  }
+ 

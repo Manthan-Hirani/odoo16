@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<template id="_assets_primary_variables" inherit_id="website._assets_primary_variables" priority="1">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/variable.scss"/>
+        </xpath>
+</template>
+
+<template id="assets_frontend" inherit_id="website.assets_frontend" priority="1">
+        <xpath expr="//link[last()]" position="after">
+            <!-- Page CSS -->
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/s_carousel.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/s_about.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/s_service.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/s_projects.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/s_testimonial.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/s_contact.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/s_footer.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/s_header.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/s_partner_logo.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/s_info_details.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/s_info_tabs.scss"/>
+            <!-- Theme CSS -->
+            <link rel="stylesheet" type="text/scss" href="/theme_aspire/static/src/scss/style.scss"/>
+        </xpath>
+
+      <xpath expr="." inherit_id="website.assets_frontend" position="inside">
+       <script type="text/javascript" src="/theme_aspire/static/src/js/main.js" /> 
+      </xpath>
+
+</template>
+</odoo>  

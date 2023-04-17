@@ -1,0 +1,14 @@
+.detail-img{
+    height: 250px;
+    object-fit: cover;
+}
+ul.highlights{
+    list-style: none;
+    padding: 15px 0;
+    li{
+        margin-bottom: 8px;
+    }
+    li:last-child{
+        margin-bottom: 0px;
+    }
+}

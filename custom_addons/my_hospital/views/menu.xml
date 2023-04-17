@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+    <menuitem id="menu_hospital_mian"
+              name="Hospital Test"
+              web_icon="my_hospital,static/description/icon.png"
+              sequence="0"/>
+
+    <menuitem id="menu_patient_mian"
+              name="Patient Details"
+              parent="menu_hospital_mian"
+              sequence="0"/>
+
+    <menuitem id="menu_appointment_mian"
+              name="Appointment Details"
+              parent="menu_hospital_mian"
+              sequence="10"/>
+
+    <menuitem id="menu_doctor_mian"
+              name="Doctor Details"
+              parent="menu_hospital_mian"
+              sequence="20"/>
+
+</odoo>

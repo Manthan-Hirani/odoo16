@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+   <template id="s_info_tabs" name="Tab Block">
+      <section class="snippet_info_tabs bg-white">
+         <div class="section-padding">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg tab-view-margin">
+                     <div class="info-tabs">
+                        <!-- Nav pills -->
+                        <ul class="nav nav-pills">
+                           <li class="nav-item">
+                              <a class="nav-link active" data-toggle="pill" href="#philosophy">Philosophy</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" data-toggle="pill" href="#values">Core Values</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" data-toggle="pill" href="#mission">Mission</a>
+                           </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                           <div class="tab-pane container active" id="philosophy">
+                              <p class="text mb-0">When it comes to global sourcing, Aspire has set—and continues to meet—a higher standard through following pillars:
+                              </p>
+                              <p class="text mb-0"><span class="font-weight-bold">Quality First :</span> Aspire has a strong track record of building high-quality, outsourced software solutions for its customers. We believe in the philosophy of putting ‘quality first’.
+                              </p>
+                              <p class="text mb-0"><span class="font-weight-bold">People Focus :</span> Aspire knows the value of having top-quality staff working on your offshore software development projects. We focus on hiring, training and retaining the best talent, including software developers, human resources and project managers.
+                              </p>
+                              <p class="text mb-0"><span class="font-weight-bold">Ease of Doing Business :</span> Aspire receives rave reviews from customers, who report that we are easy to work with throughout the entire software development process.
+                              </p>
+                           </div>
+                           <div class="tab-pane container fade" id="values">
+                              <p class="text mb-0">From corporate strategy to day-to-day operations, everyone within Aspire works tenaciously to support our clients' success. To guide our decisions and actions, we adhere to our "R.O.C.K." company values:
+                              </p>
+                              <p class="text mb-0"><span class="font-weight-bold">Respect for the Individual :</span> At Aspire, we treat everyone—employees, customers, and vendors—with respect and professionalism.
+                              </p>
+                              <p class="text mb-0"><span class="font-weight-bold">Open and Transparent Environment :</span> Our culture promotes fairness in action, free flow of ideas, outside-the-box thinking, and an ideal blend of self-expression and teamwork.
+                              </p>
+                              <p class="text mb-0"><span class="font-weight-bold">Customer Satisfaction :</span> In decisions and actions large and small, we always put our customers' needs before our own. We aren't ashamed to admit that we're obsessed with honoring our commitments and satisfying our customers.
+                              </p>
+                              <p class="text mb-0"><span class="font-weight-bold">Continuous Improvement :</span> Day after day, we continuously seek opportunities to enhance our services and ourselves. We aim for betterment at the individual and organizational level—all with a goal of delivering groundbreaking results to our clients.
+                              </p>
+                           </div>
+                           <div class="tab-pane container fade" id="mission">
+                              <p class="text mb-0">To contribute to our customers' success by providing the best in class people, process and solutions.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </template>
+   <template id="place_info_tabs_into_bar" inherit_id="website.snippets" name="Place Info Tabs into bar">
+      <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
+         <t t-snippet="theme_aspire.s_info_tabs"
+            t-thumbnail="/theme_aspire/static/src/img/snippets_thumbs/s_info_tabs.jpg"/>
+      </xpath>
+   </template>
+</odoo>

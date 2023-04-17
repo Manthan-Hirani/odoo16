@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="action_mail_patient" model="ir.actions.server">
+        <field name="name">Mail to patient</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="my_hospital.model_hospital_patient"/>
+        <field name="binding_model_id" ref="my_hospital.model_hospital_patient"/>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">
+            if record:
+            action_values = env.ref('my_hospital.window_action_mail_patient').sudo().read()[0]
+            action_values.update({'context': env.context})
+            action = action_values
+        </field>
+    </record>
+
+    <record id="view_hospital_patient_tree" model="ir.ui.view">
+        <field name="name">hospital.patient.tree</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <tree sample="1" multi_edit="1">
+                <field name="name"/>
+                <field name="emergency" widget="priority"/>
+                <field name="id" groups="base.group_hospital_admin"/>
+                <field name="age"/>
+                <field name="gender"/>
+                <field name="email"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hospital_patient_search" model="ir.ui.view">
+        <field name="name">hospital.patient.search</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="emergency"/>
+                <field name="id"/>
+                <field name="age"/>
+                <field name="gender"/>
+                <field name="email"/>
+                <filter name="filter_male" string="Male" domain="[('gender','=','male')]"/>
+                <separator/>
+                <filter name="filter_female" string="Female" domain="[('gender','=','female')]"/>
+                <separator/>
+                <!--                <filter name="filter_kid" string="Kid" domain="[('age','&lt;=',5)]"/>-->
+                <filter name="emergency_none" string="Emergency None" domain="[('emergency','=','0')]"/>
+                <filter name="emergency_low" string="Emergency Low" domain="[('emergency','=','1')]"/>
+                <filter name="emergency_medium" string="Emergency Medium" domain="[('emergency','=','2')]"/>
+                <filter name="emergency_high" string="Emergency High" domain="[('emergency','=','3')]"/>
+                <separator/>
+                <filter name="filter_Archive" string="Archive" domain="[('active','=',False)]"/>
+                <group expand="0" string="Group By">
+                    <filter name="filter_gender" string="Gender" context="{'group_by':'gender'}"/>
+                </group>
+                <!--                <searchpanel>-->
+                <!--                    <field name="gender" string="Gender" select="multi" icon="fa-users" enable_counters="1"/>-->
+                <!--                </searchpanel>-->
+            </search>
+        </field>
+    </record>
+
+    <record id="view_hospital_patient_form" model="ir.ui.view">
+        <field name="name">hospital.patient.form</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <!--                    <button name="mail_btn" type="object" string="Mail" confirm="Are you sure to send Mail?"/>-->
+                    <!--                    <field name="state" widget="statusbar" nolabel="1" options="{'clickable': '1'}"/>-->
+                </header>
+                <sheet>
+                    <group>
+                        <div class="h1">
+                            <field name="id"/>
+                            <br/>
+                            <label for="emergency" string="Emergency Level" class="oe_edit_only"/>
+                            <field name="emergency" widget="priority" class="mr-3"/>
+                            <!--                            <label for="name" string="Name" class="oe_edit_only"/>-->
+                            <!--                            <field name="name"/>-->
+                        </div>
+                        <div>
+                            <field name="image" widget="image" class="oe_avatar"/>
+                        </div>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="date_of_birth"/>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="gender"/>
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="email"/>
+                        </group>
+                    </group>
+                </sheet>
+                <!-- Chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hospital_patient" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first patient!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="submenu_patient_details"
+              name="Patient"
+              action="action_hospital_patient"
+              parent="menu_patient_mian"
+              sequence="0"/>
+
+</odoo>

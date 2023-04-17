@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+ <template id="s_testimonial" name="Testimonial Block">
+    <section class="snippet_testimonial bg-white ">
+        <div class="section-padding">
+            <div class="container">
+               <div class="row text-center">
+                  <div class="col-sm-12">
+                    <hgroup> 
+                     <h1 class="section-title">Our Clients Love Us</h1>
+                     </hgroup>
+                  </div>
+               </div>
+               <div class="row testimonial-margin">
+                           <div class="col-lg">
+                              <div class="card testimonial-card shadow text-center">
+                                 <div class="card-body">
+                                    <div class="img-box p-1 rounded-circle m-auto">
+                                       <img class="rounded-circle" src="/theme_aspire/static/src/img/testimonial-user1.png" alt="First slide"/>
+                                    </div>
+                                    <p class="testimonial-text">Aspire Team has done excellent job on time. I recommend to anyone to hire him, he is helpful, patient and wonderful person.</p>
+                                    <p class="testimonial-name mb-0">Paul Mitchel</p>
+                                    <p class="testimonial-designation text-primary ">Web Developer</p>
+                                    <p class="quote-icon text-primary mb-0"><i class="fa fa-quote-right"></i></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg">
+                              <div class="card testimonial-card shadow text-center">
+                                 <div class="card-body">
+                                    <div class="img-box p-1 rounded-circle m-auto">
+                                       <img class="rounded-circle" src="/theme_aspire/static/src/img/testimonial-user2.png" alt="First slide"/>
+                                    </div>
+                                    <p class="testimonial-text">Very pleased with the work and service. Look forward to continuing to work with Aspire on this and other projects.</p>
+                                    <p class="testimonial-name mb-0">Laura Wilson</p>
+                                    <p class="testimonial-designation text-primary ">Web Developer</p>
+                                    <p class="quote-icon text-primary mb-0"><i class="fa fa-quote-right"></i></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg">
+                              <div class="card testimonial-card shadow text-center">
+                                 <div class="card-body">
+                                    <div class="img-box p-1 rounded-circle m-auto">
+                                       <img class="rounded-circle" src="/theme_aspire/static/src/img/testimonial-user3.png" alt="First slide"/>
+                                    </div>
+                                    <p class="testimonial-text">Job well done and in record time. Always available and quick to respond. Absolutely no fault found with his work</p>
+                                    <p class="testimonial-name mb-0">John Smith</p>
+                                    <p class="testimonial-designation text-primary ">Web Developer</p>
+                                    <p class="quote-icon text-primary mb-0"><i class="fa fa-quote-right"></i></p>
+                                 </div>
+                              </div>
+                           </div>             
+               </div>
+            </div>
+        </div>  
+    </section>
+</template>
+ <template id="place_testimonial_into_bar" inherit_id="website.snippets" name="Place Testimonial into bar">
+  <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+    <t t-snippet="theme_aspire.s_testimonial"
+       t-thumbnail="/theme_aspire/static/src/img/snippets_thumbs/s_testimonial.jpg"/>
+  </xpath>
+</template>
+
+
+</odoo>

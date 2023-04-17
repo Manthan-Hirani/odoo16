@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_milestone_tags_tree" model="ir.ui.view">
+        <field name="name">project.milestone.tree</field>
+        <field name="model">project.milestone.temp</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_milestone_tags" model="ir.actions.act_window">
+        <field name="name">Milestone Tags</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.milestone.temp</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your Milestone !!!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_milestone_tags"
+              name="Milestone Tags"
+              parent="project.menu_project_config"
+              action="action_milestone_tags"
+              sequence="100"/>
+
+</odoo>

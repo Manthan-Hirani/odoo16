@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+   <template id="s_info_details" name="Image + Text + List Block">
+       <section class="snippet_info_details bg-white">
+        <div class="section-padding">
+         <div class="container">
+            <div class="row h-100">
+                <div class="col-lg-9 tab-view-margin">
+                  <img class="d-block w-100 detail-img mb-3" src="/theme_aspire/static/src/img/about.png" />
+                   <hgroup>
+                        <h1 class="section-title">Introduction</h1>
+                    </hgroup>
+                    <p class="text">Aspire is a leading Java EE, Liferay, Mobility BigData and Customized Software Development Services providing company with development center in Ahmedabad, Gujarat, India. We have been providing high-quality, high-value software development services to the Independent Software Vendors and the enterprises since 2010 by leveraging best-in-class people, processes and technologies.
+                    </p>
+                     <p class="text">Aspire is dedicated to developing effective outsourcing partnerships with clients in order to accelerate time to market, reduce operational cost, and empower them to devote more time to their core business.
+                    </p>
+                </div>
+                 <div class="col-lg-3 list-box bg-primary text-white">
+                    <ul class="highlights">
+                        <li>14+years of experience</li>
+                        <li>50+ clients</li>
+                        <li>Timely Delivery</li>
+                        <li>High Quality Standards</li>
+                        <li>Lifetime Support</li>
+                        <li>Transparency</li>
+                        <li>Creative and Innovative Ideas</li>
+                        <li>Build Long Term Relationships</li>
+                        <li>Flexible Engagement Models</li>
+                        <hr class="saperator"/>
+                        <li>Discuss Your Requirements</li>
+                         <button type="button" class="btn bg-danger btn-rounded btn-block mt-3">Get a Quote<i class="fa fa-long-arrow-right ml-1"></i></button>
+                    </ul>
+                 </div>
+            </div>
+         </div>
+         </div>
+     </section>
+   </template>
+<template id="place_info_details_into_bar" inherit_id="website.snippets" name="Place Info Details into bar">
+  <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
+    <t t-snippet="theme_aspire.s_info_details"
+       t-thumbnail="/theme_aspire/static/src/img/snippets_thumbs/s_info_details.jpg"/>
+  </xpath>
+</template>
+</odoo>

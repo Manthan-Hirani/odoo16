@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+   <template id="s_about_box" name="Text + Image">
+       <section class="snippet_about_box bg-white">
+         <div class="container">
+            <div class="card card-about">
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col-lg tab-view-margin">
+                        <hgroup>
+                        <h1 class="section-title">About Aspire</h1>
+                        <p class="text">Offshore Liferay, Enterprise Mobility, BigData, Customized Software Development, Ahmedabad, India  Aspire is a leading Liferay, Mobility
+                           BigData and Customized Software Development Services providing company with development center in Ahmedabad, Gujarat, India. 
+                        </p>
+                        </hgroup>
+                        <ul class="info-box">
+                           <li class="shadow-sm">
+                              <span class="info-number">880+</span>
+                              <hr class="info-saperator" />
+                              <span class="info-text text-primary">Projects</span>
+                           </li>
+                           <li class="shadow-sm">
+                              <span class="info-number">500+</span>
+                              <hr class="info-saperator" />
+                              <span class="info-text text-primary">Clients</span>
+                           </li>
+                           <li class="shadow-sm">
+                              <span class="info-number">110+</span>
+                              <hr class="info-saperator" />
+                              <span class="info-text text-primary">Awards</span>
+                           </li>
+                        </ul>
+                        <button type="button" class="btn bg-primary btn-rounded">Read More<i class="fa fa-long-arrow-right ml-1"></i></button>
+                     </div>
+                     <div class="col-lg">
+                        <img class="d-block w-100" src="/theme_aspire/static/src/img/about.png" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+     </section>
+   </template>
+<template id="place_about_box_into_bar" inherit_id="website.snippets" name="Place About Box into bar">
+  <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+    <t t-snippet="theme_aspire.s_about_box"
+       t-thumbnail="/theme_aspire/static/src/img/snippets_thumbs/s_about.jpg"/>
+  </xpath>
+</template>
+</odoo>

@@ -1,0 +1,26 @@
+{
+    'name': 'Milestone',
+    'version': '1.0.0',
+    'category': '',
+    'sequence': -1001,
+    'author': 'Manthan',
+    'summary': '',
+    'description': """""",
+    'depends': ['project', 'account'],
+    'data': [
+        'security/ir.model.access.csv',
+        # 'views/menu.xml',
+        'data/milestone_tags_data.xml',
+        'views/milestone_tags.xml',
+        'report/report_template01.xml',
+        'report/report.xml',
+    ],
+    'images': [
+        'Images/dp.png',
+        'Images/only_logo.png',
+    ],
+    'demo': [],
+    'application': True,
+    'installable': True,
+    'license': 'LGPL-3',
+}

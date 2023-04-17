@@ -1,0 +1,16 @@
+.info-tabs{
+    .nav{
+        border-bottom: $o-border-default;
+    }
+    .nav-pills{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .nav-link{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .tab-pane{
+        padding:15px 0;
+    }
+}

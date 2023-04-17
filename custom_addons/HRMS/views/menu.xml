@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="hrms_main_menu"
+              name="HRMS"
+              sequence="-10"/>
+
+    <menuitem id="menu_employee_main"
+              name="Employee"
+              parent="hrms_main_menu"
+              sequence="0"/>
+
+    <menuitem id="menu_recruitment_main"
+              name="Recruitment"
+              parent="hrms_main_menu"
+              sequence="10"/>
+
+    <menuitem id="menu_attendance_main"
+              name="Attendance"
+              parent="hrms_main_menu"
+              sequence="20"/>
+
+</odoo>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_hospital_doctor_form" model="ir.ui.view">
+        <field name="name">hospital.doctor.form</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <group>
+                        <group>
+                            <field name="doctor_id"/>
+                            <field name="gender"/>
+                        </group>
+                        <group>
+                            <field name="experience"/>
+                            <field name="expertise" default="None"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+                <!-- Chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hospital_doctor_tree" model="ir.ui.view">
+        <field name="name">hospital.doctor.tree</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <tree sample="1" multi_edit="1">
+                <field name="doctor_id" widget="many2one_avatar_user"/>
+                <field name="gender"/>
+                <field name="experience"/>
+                <field name="expertise"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hospital_doctor_kanban" model="ir.ui.view">
+        <field name="name">hospital.doctor.kanban</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <kanban sample="1">
+                <field name="doctor_id"/>
+                <field name="gender"/>
+                <field name="experience"/>
+                <field name="expertise"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <ul>
+                                    <li><field name="doctor_id"/></li>
+                                    <li><field name="gender"/></li>
+<!--                                    <li><field name="experience"/></li>-->
+                                    <li><field name="expertise"/></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_hospital_doctor_search" model="ir.ui.view">
+        <field name="name">hospital.doctor.search</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="doctor_id"/>
+                <field name="expertise"/>
+                <filter name="filter_male" string="Male" domain="[('gender','=','male')]"/>
+                <filter name="filter_female" string="Female" domain="[('gender','=','female')]"/>
+                <separator/>
+                <filter name="filter_experience" string="Experience" domain="[('experience','&gt;=',10)]"/>
+                <separator/>
+                <filter name="filter_Archive" string="Archive" domain="[('active','=',False)]"/>
+                <group expand="0" string="Group By">
+                    <filter name="filter_gender" string="Gender" context="{'group_by':'gender'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+    <record id="action_hospital_doctor" model="ir.actions.act_window">
+        <field name="name">Doctor</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.doctor</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first doctor !
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="submenu_doctor_details"
+              name="Doctor"
+              action="action_hospital_doctor"
+              parent="menu_doctor_mian"
+              sequence="10"/>
+</odoo>

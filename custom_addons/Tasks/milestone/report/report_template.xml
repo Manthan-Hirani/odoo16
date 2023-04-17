@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="report_customer_invoices">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <h2 style="page-break-before:always;"/>
+                <h2>Testing</h2>
+            </t>
+        </t>
+    </template>
+
+    <template id="report_invoice">
+        <t t-call="web.html_container">
+            <t t-call="milestone.custom_header_footer">
+                <!--                <t t-foreach="docs" t-as="doc">-->
+                <t t-call="milestone.report_customer_invoices"/>
+                <!--                </t>-->
+            </t>
+        </t>
+    </template>
+
+    <template id="custom_header_footer">
+        <t t-if="not o" t-set="o" t-value="doc"/>
+
+        <t t-if="not company">
+            <!-- Multicompany -->
+            <t t-if="company_id">
+                <t t-set="company" t-value="company_id"/>
+            </t>
+            <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+        </t>
+
+
+        <div class="header">
+            <div class="row" style="border-bottom: 2px solid black">
+<!--                <div style="border-bottom: 1px solid #ddd; width: 100%; padding: 5px; background: #d6e4e7;-->
+<!--                    border-collapse: collapse; border-spacing: 0;">-->
+<!--                    <img src="https://aspiresoftware.in/images/odoo_images/logo.png" alt="Aspire Logo"/>-->
+<!--                </div>-->
+                <div class="col-4 mb-3">
+                    <img alt="img" t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height:100px"/>
+                </div>
+                <div class="col-8 text-right mb-3">
+<!--                    <span t-if="company.street"/>-->
+                    <span t-if="company.street" t-field="company.street"/><br/>
+                    <span t-if="company.street2" t-field="company.street2"/><br/>
+                    <span t-if="company.city" t-field="company.city"/><br/>
+                    <span t-if="company.state_id" t-field="company.state_id"/>
+                    <span t-if="company.zip" t-field="company.zip"/><br/>
+                    <span t-if="company.country_id" t-field="company.country_id"/>
+                </div>
+            </div>
+        </div>
+        <div class="article o_report_layout_standard">
+            <t t-out="0"/>
+        </div>
+        <div class="footer o_standard_footer">
+            <div class="row">
+                <div class="w-100"
+                     style="margin: 0px; font-weight: normal; font-size: 16px; line-height: 1.6; border-top: 2px solid black;">
+                    <div class="text-center mb-4">
+                        Cell:
+                        <span t-if="company.phone" t-field="company.phone"/>
+                        <div class="text-right">
+                            page no.
+                            <span class="page"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--            <div class="row text-center">-->
+            <!--                <div class="page"/>-->
+            <!--            </div>-->
+        </div>
+    </template>
+
+</odoo>

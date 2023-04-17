@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+   <template id="s_service" name="Service Tab">
+     <section class="snippet_service bg-white">
+         <div class="bg-services section-padding">
+            <div class="container">
+               <div class="row text-center">
+                  <div class="col-sm-12">
+                   <hgroup>
+                     <h1 class="section-title text-white">Our Services</h1>
+                     <p class="section-subtitle text-white">We are focused on optimizing our customer's investments in Information Technology by providing following benefits to them:</p>
+                  </hgroup>
+                  </div>
+               </div>
+               <!-- Nav tabs -->
+               <div class="row nav nav-tabs nav-fill">
+                  <div class="nav-item col p-0">
+                     <img class="" src="/theme_aspire/static/src/img/portal-development.png" />
+                     <a class="custom-link nav-link text-primary active" data-toggle="tab" href="#portal-development">Portal Development</a>
+                  </div>
+                  <div class="nav-item col p-0">
+                     <img class="" src="/theme_aspire/static/src/img/enterprise-mobility.png" />
+                     <a class="custom-link nav-link text-primary" data-toggle="tab" href="#enterprise-mobility">Enterprise Mobility</a>
+                  </div>
+                  <div class="nav-item col p-0">
+                     <img class="" src="/theme_aspire/static/src/img/startups.png" />
+                     <a class="custom-link nav-link text-primary" data-toggle="tab" href="#startups">Startups</a>
+                  </div>
+                  <div class="nav-item col p-0">
+                     <img class="" src="/theme_aspire/static/src/img/product-developemnt.png" />
+                     <a class="custom-link nav-link text-primary" data-toggle="tab" href="#product-development">Product Development</a>
+                  </div>
+                  <div class="nav-item col p-0">
+                     <img class="" src="/theme_aspire/static/src/img/cms-development.png" />
+                     <a class="custom-link nav-link text-primary" data-toggle="tab" href="#cms-development">CMS Development</a>
+                  </div>
+                  <div class="nav-item col p-0">
+                     <img class="" src="/theme_aspire/static/src/img/cloud-service.png" />
+                     <a class="custom-link nav-link text-primary" data-toggle="tab" href="#cloud-services">Cloud Services</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div>
+            <div class="container">
+               <!-- Tab panes -->
+               <div class="tab-content p-3">
+                  <div class="tab-pane container active" id="portal-development">
+                     <div class="row">
+                        <div class="col-md-4 col-sm-12 mobile-view-margin">
+                            <h6 class="mb-3 text-uppercase">Portal Development</h6>
+                           <p>Portals solutions provide a single window to information and services across enterprise applications with a personalized and intuitive user interface across all delivery channels.                           </p>
+                           <button type="button" class="btn bg-primary btn-rounded ">Read More<i class="fa fa-long-arrow-right ml-1"></i></button>
+                        </div>
+                        <div class="col-md-4 col-sm-12 mobile-view-margin">
+                           <ul class="service-list">
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Consulting and business analysis</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Process modeling</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Portal architecture design</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>UI design and prototyping</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Data modeling, data flow modeling and database design/integration</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Portal applications and modules development</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Deployment and stabilization</li>
+                           </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                           <img class="d-block w-100" src="/theme_aspire/static/src/img/about.png" />
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane container fade" id="enterprise-mobility">
+                   <div class="row">
+                        <div class="col-md-4 col-sm-12 mobile-view-margin">
+                            <h6 class="mb-3 text-uppercase">Enterprise Mobility</h6>
+                           <p>Aspire’s Enterprise Mobile Management platform provides both Mobile Service Management and Mobile Device Management in one solution.
+                           </p>
+                           <button type="button" class="btn bg-primary btn-rounded ">Read More<i class="fa fa-long-arrow-right ml-1"></i></button>
+                        </div>
+                        <div class="col-md-4 col-sm-12 mobile-view-margin">
+                           <ul class="service-list">
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Defining the enterprise mobile strategy</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Defining the mobile devices strategy</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Web service integration</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Integration of social media APIs</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Optimization services</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Mobile QA / testing services</li>
+                           </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                           <img class="d-block w-100" src="/theme_aspire/static/src/img/about.png" />
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane container fade" id="startups">
+                   <div class="row">
+                        <div class="col-md-4 col-sm-12 mobile-view-margin">
+                            <h6 class="mb-3 text-uppercase">Startups</h6>
+                           <p>Aspire consulting division offers high-end technology planning and execution services for global organizations. It is made up of technology visionaries and thought leaders with experience across industry domains.
+                           </p>
+                           <button type="button" class="btn bg-primary btn-rounded ">Read More<i class="fa fa-long-arrow-right ml-1"></i></button>
+                        </div>
+                        <div class="col-md-4 col-sm-12 mobile-view-margin">
+                           <ul class="service-list">
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Startup business consulting practice</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Small business management consultancy</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Strategic consulting services, market consulting</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Startup marketing research</li>
+                           </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                           <img class="d-block w-100" src="/theme_aspire/static/src/img/about.png" />
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane container fade" id="product-development">
+                   <div class="row">
+                        <div class="col-md-4 col-sm-12 mobile-view-margin">
+                            <h6 class="mb-3 text-uppercase">Product Development</h6>
+                           <p>Our passion for quality and expertise in software product development result in finely tuned, reliable software solutions. Our capabilities and expertise are comprehensive— covering every phase of the software development product lifecycle.
+                           </p>
+                           <button type="button" class="btn bg-primary btn-rounded ">Read More<i class="fa fa-long-arrow-right ml-1"></i></button>
+                        </div>
+                        <div class="col-md-4 col-sm-12 mobile-view-margin">
+                           <ul class="service-list">
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>New product development</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Product migration</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Product re-engineering</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Product enhancement</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Product testing</li>
+                           </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                           <img class="d-block w-100" src="/theme_aspire/static/src/img/about.png" />
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane container fade" id="cms-development">
+                   <div class="row">
+                        <div class="col-md-4 col-sm-12 mobile-view-margin">
+                            <h6 class="mb-3 text-uppercase">CMS Development</h6>
+                           <p>Aspire has carved a niche in the domain of delivering customer-centric range of scalable and business oriented CMS based services for enterprises and elite organizations.
+                           </p>
+                           <button type="button" class="btn bg-primary btn-rounded ">Read More<i class="fa fa-long-arrow-right ml-1"></i></button>
+                        </div>
+                        <div class="col-md-4 col-sm-12 mobile-view-margin">
+                           <ul class="service-list">
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Configuration of CMS tools</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Custom Template Development</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Module development</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>User interface skinning</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Internationalization and localization</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Portal applications and modules development</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Automation Testing</li>
+                           </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                           <img class="d-block w-100" src="/theme_aspire/static/src/img/about.png" />
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane container fade" id="cloud-services">
+                   <div class="row">
+                        <div class="col-md-4 col-sm-12 mobile-view-margin">
+                           <h6 class="mb-3 text-uppercase">Cloud Services</h6>
+                           <p>As an established Cloud Service provider, Aspire can help you with Cloud Awareness, Cloud Assessment and Cloud Adoption.
+                           </p>
+                           <button type="button" class="btn bg-primary btn-rounded ">Read More<i class="fa fa-long-arrow-right ml-1"></i></button>
+                        </div>
+                        <div class="col-md-4 col-sm-12 mobile-view-margin">
+                           <ul class="service-list">
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Identify the cloud computing form, best suited to your business goals.</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Transition applications to different cloud vendors based on their workload and cost-benefits.</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Define a migration strategy and roadmap.</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Optimize information security costs.</li>
+                              <li><span class="list-icon text-primary"><i class="fa fa-check-circle mr-2"></i></span>Consulting, deployment and migration services, and environment build and management</li>
+                           </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                           <img class="d-block w-100" src="/theme_aspire/static/src/img/about.png" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+    </section>
+   </template>
+   <template id="place_service_into_bar" inherit_id="website.snippets" name="Place Service into bar">
+  <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+    <t t-snippet="theme_aspire.s_service"
+       t-thumbnail="/theme_aspire/static/src/img/snippets_thumbs/s_service.jpg"/>
+  </xpath>
+</template>
+</odoo>

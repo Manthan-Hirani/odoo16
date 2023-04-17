@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<!-- Custom header Starts -->
+<template id="custom_header" inherit_id="website.layout" name="Custom Header">
+  <xpath expr="//div[@id='wrapwrap']/header/nav" position="before">
+      <div class="top-header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-7">
+                     <ul class="nav">
+                        <li class="nav-item">
+                           <a class="nav-link" href="#"><span class="header-icon bg-primary"><i class="fa fa-phone"></i></span>(855) 655-4356</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#"><span class="header-icon bg-primary"><i class="fa fa-envelope"></i></span>hello@aspiresoftware.in</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-md-5">
+                     <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                           <a class="nav-link" href="#">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#">Contact</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+  </xpath>
+</template>
+ <!-- Custom header Ends -->
+<!-- Add arrow in footer copyright -->
+<template id="add_arrow" inherit_id="website.layout">
+        <xpath expr="//div[hasclass('o_footer_copyright')]//div[hasclass('row')]/div[1]" position="attributes">
+            <attribute name="class" separator=" " remove="col-lg-6" add="col-lg-10"/>
+        </xpath>
+        <xpath expr="//div[hasclass('o_footer_copyright')]//div[hasclass('row')]/div[2]" position="attributes">
+            <attribute name="class" separator=" " remove="col-lg-6" add="col-lg-10"/>
+        </xpath>
+        <xpath expr="//div[hasclass('o_footer_copyright')]//div[hasclass('row')]/div[1]" position="after">
+            <div class="col-sm col-lg-2 d-none d-md-block text-right">
+                <a href="#" class="btn bg-primary top-btn top"><i class="fa fa-angle-double-up fa-1x"/></a>
+            </div>
+        </xpath>
+</template>
+<!-- Add arrow in footer copyright -->
+</odoo>

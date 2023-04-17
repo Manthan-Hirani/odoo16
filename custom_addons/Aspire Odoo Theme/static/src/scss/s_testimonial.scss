@@ -1,0 +1,42 @@
+.testimonial-margin {
+	margin-top: 30px;
+}
+.testimonial-card {
+	position: relative;
+	.img-box {
+		position: absolute;
+		top: -45px;
+		width: 100%;
+		left: 0;
+		right: 0;
+		img {
+			width: 80px;
+			height: 80px;
+		}
+	}
+	.testimonial-text {
+		margin: 50px 0 40px;
+	}
+	.testimonial-name {
+		font-weight: bold;
+		font-size: 16px;
+	}
+	.testimonial-designation {
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+	.quote-icon {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.testimonial-margin{
+		.col-lg {
+			margin-bottom: 70px;
+		}
+		.col-lg:last-child {
+			margin-bottom:0px;
+		}
+	}
+}

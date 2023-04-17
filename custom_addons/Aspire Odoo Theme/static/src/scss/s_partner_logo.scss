@@ -1,0 +1,22 @@
+.snippet_partner_logo{
+    background-color: $o-bg-off-white;
+    img{
+        margin:20px 0;
+        width:100%;
+    }
+}
+
+@media only screen and (max-width:1024px){
+    .snippet_partner_logo{
+        img{
+            width:auto;
+        }
+    }
+}
+@media only screen and (max-width: 480px){
+    .snippet_partner_logo{
+        .col{
+            flex: 0 100%!important;
+        }
+    }
+}

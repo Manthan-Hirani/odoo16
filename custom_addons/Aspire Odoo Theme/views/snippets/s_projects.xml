@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+   <template id="s_projects" name="Masonry Block">
+      <section class="snippet_projects bg-offwhite">
+            <div class="section-padding">
+                  <div class="container">
+                  <div class="row text-center">
+                        <div class="col-sm">
+                         <hgroup>
+                        <h1 class="section-title">Our Projects</h1>
+                        <p class="section-subtitle">We are focused on optimizing our customer's investments in Information Technology by providing following benefits to them:</p>
+                        </hgroup>
+                        </div>
+                  </div>
+                  <div class="row project-list shadow-lg"> 
+                        <div class="col-sm-12">
+                        <div class="row mobile-view">
+                              <div class="col-sm p-0 d-flex align-items-center bg-white">
+                              <div class="project-details">
+                                    <p class="text-muted mb-0">Java EE</p>
+                                    <h6 class="text-uppercase">Cab booking system</h6>
+                                    <p class="mt-3 mb-3">It is a application to book cab, pay fare, track driver who picks up him/her for journey and also shows a booking placed by passenger.</p>
+                                    <button type="button" class="btn bg-primary btn-rounded ">Read More<i class="fa fa-long-arrow-right ml-1"></i></button>
+                              </div>
+                              <div class="arrow-right"></div>
+                              <div class="arrow-top"></div>
+                              </div>
+                              <div class="col-sm p-0">
+                              <img class="d-block w-100 project-img" src="/theme_aspire/static/src/img/project1.png" />
+                              </div>
+                        </div>
+                        <div class="row mobile-view">
+                              <div class="col-sm p-0">
+                              <img class="d-block w-100 project-img" src="/theme_aspire/static/src/img/project2.png" />
+                              </div>
+                              <div class="col-sm p-0 d-flex align-items-center bg-white">
+                              <div class="project-details text-right">
+                                    <p class="text-muted mb-0">Liferay</p>
+                                    <h6 class="text-uppercase">Online Portal For Clients</h6>
+                                    <p class="mt-3 mb-3">Our customer wants to create a portal for elderly age people. The portal helps people to find best senior care services and products.</p>
+                                    <button type="button" class="btn bg-primary btn-rounded ">Read More<i class="fa fa-long-arrow-right ml-1"></i></button>
+                              </div>
+                              <div class="arrow-left"></div>
+                              <div class="arrow-top"></div>
+                              </div>
+                        </div>
+                        <div class="row mobile-view">
+                              <div class="col-sm p-0 d-flex align-items-center bg-white">
+                              <div class="project-details">
+                                    <p class="text-muted mb-0">Liferay</p>
+                                    <h6 class="text-uppercase">School Portal</h6>
+                                    <p class="mt-3 mb-3">Our customer is looking for a cloud based portal for schools packed with enhanced features including collaboration, community, calendar, news and many others. </p>
+                                    <button type="button" class="btn bg-primary btn-rounded ">Read More<i class="fa fa-long-arrow-right ml-1"></i></button>
+                              </div>
+                              <div class="arrow-right"></div>
+                              <div class="arrow-top"></div>
+                              </div>
+                              <div class="col-sm p-0">
+                              <img class="d-block w-100 project-img" src="/theme_aspire/static/src/img/project3.png" />
+                              </div>
+                        </div>
+                        </div>
+                  </div>
+                  <div class="row text-center mt-4">
+                        <div class="col-sm">
+                        <button type="button" class="btn bg-primary btn-rounded ">Read More<i class="fa fa-long-arrow-right ml-1"></i></button>
+                        </div>
+                  </div>
+                  </div>
+            </div>
+      </section>
+   </template>
+   <template id="place_project_into_bar" inherit_id="website.snippets" name="Place Projects into bar">
+      <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+         <t t-snippet="theme_aspire.s_projects"
+            t-thumbnail="/theme_aspire/static/src/img/snippets_thumbs/s_project.jpg"/>
+      </xpath>
+   </template>
+</odoo>

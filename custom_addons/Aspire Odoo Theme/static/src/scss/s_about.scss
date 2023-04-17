@@ -1,0 +1,39 @@
+.card-about{
+    position: relative;
+    top: -100px;
+    margin-bottom: -60px;
+    .info-box{
+    margin:0;
+    padding: 0;
+    margin-bottom: 40px;
+        li{
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 15px;
+            padding: 19px 28px;
+            text-align: center;
+            .info-number{
+                font-weight: bold;
+                display: block;
+            }
+            .info-saperator{
+                margin: 5px auto;
+                width: 15px;
+                text-align: center;
+                display: flex;
+                height: 1px;
+            }
+            .info-text{
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .card-about{
+        position: relative;
+        top: unset;
+        margin: 40px 0;
+    }
+}

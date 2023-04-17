@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+   <template id="s_carousel" name="Carousel Block">
+      <section class="snippet_carousel">
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <img class="d-block w-100 carousel-image" src="/theme_aspire/static/src/img/banner1.png" alt="First slide"/>
+                  <div class="carousel-caption d-none d-md-block">
+                     <p class="slider-title">We Bring your<br/><span class="font-italic text-warning">Imaginations to Reality1</span></p>
+                     <p class="slider-text">Amaze everyone with our Augmented Reality Service</p>
+                     <button type="button" class="btn bg-danger btn-rounded">Read More</button>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img class="d-block w-100 carousel-image" src="/theme_aspire/static/src/img/banner2.png" alt="Second slide"/>
+                  <div class="carousel-caption d-none d-md-block">
+                     <p class="slider-title">Providing Stunning<br/><span class="font-italic text-warning">Enterprise Class Solutions</span></p>
+                     <p class="slider-text">at your Service to unify Customer Experience</p>
+                     <button type="button" class="btn bg-danger btn-rounded">Read More</button>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img class="d-block w-100 carousel-image" src="/theme_aspire/static/src/img/banner3.png" alt="Third slide"/>
+                  <div class="carousel-caption d-none d-md-block">
+                     <p class="slider-title">Digitizing Business<br/><span class="font-italic text-warning">On Mobile and web platforms</span></p>
+                     <p class="slider-text">Connection people, device, data and other things.</p>
+                     <button type="button" class="btn bg-danger btn-rounded">Read More</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </template>
+   <template id="place_carousel_into_bar" inherit_id="website.snippets" name="Place carousel into bar">
+      <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+         <t t-snippet="theme_aspire.s_carousel"
+            t-thumbnail="/theme_aspire/static/src/img/snippets_thumbs/s_carousel.jpg"/>
+      </xpath>
+   </template>
+</odoo>
